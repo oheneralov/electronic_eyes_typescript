@@ -1,0 +1,54 @@
+{
+  "name": "adonis-api-app",
+  "version": "4.1.0",
+  "adonis-version": "4.1.0",
+  "description": "Adonisjs boilerplate for API server with pre-configured JWT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node ace test",
+    "test:unit": "adonis test",
+    "e2e:api": "mocha 'e2e/api/app.e2e-spec.js'",
+    "e2e:web": "mocha 'e2e/functional/*.spec.js'",
+    "e2e:bigcomm": "mocha 'e2e/bigcomm/*.spec.js'",
+    "lint": "eslint app start",
+    "build": "adonis bundle",
+    "build:dev": "adonis bundle --watch",
+    "build:prod": "adonis bundle --production",
+    "gen:doc": "apidoc --input start/ --output doc/apidoc/",
+    "prepare_cloudramp": "adonis migration:refresh",
+    "seed": "adonis seed",
+    "seed:dev": "adonis seed --files  UserSeeder.js"
+  },
+  "keywords": [
+    "adonisjs",
+    "adonis-app"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@adonisjs/ace": "^5.0.8",
+    "@adonisjs/auth": "^3.0.7",
+    "@adonisjs/bodyparser": "^2.0.5",
+    "@adonisjs/cors": "^1.0.7",
+    "@adonisjs/fold": "^4.0.9",
+    "@adonisjs/framework": "^5.0.9",
+    "@adonisjs/ignitor": "^2.0.8",
+    "@adonisjs/lucid": "^6.1.3",
+    "@adonisjs/validator": "^5.0.6",
+    "eslint": "^7.18.0",
+    "moment": "^2.29.1",
+    "mysql": "^2.16.0",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1"
+  },
+  "autoload": {
+    "App": "./app"
+  }
+}
