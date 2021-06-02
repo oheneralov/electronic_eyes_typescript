@@ -1,5 +1,0 @@
-apps:
-  - script   : server.js
-    instances: 1
-
-
