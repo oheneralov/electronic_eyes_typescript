@@ -3,32 +3,40 @@ import './BirthdayStyles.css';
 import {ThemeContext} from './theme-context';
 
 class Birthday extends Component {
+  props: any;
   constructor(props: object) {
     super(props)
-
   }
 
-  componentWillMount() {
+  componentDidMount() {
 		try {
-			console.log('context ', this.context)
-		} catch(err) {
+      // console.log('componentWillMount birthday: ')
+ 		} catch(err) {
 			console.log('componentWillMount birthday: ' + err.message)
 		}
 	}
 
 
   render() {
+    const path = this.props.location.pathname
+    
     return (
-      <div>
-        <p>
-        Language: {this.context.lang}
-        </p>
-      <h2 className="titleBirthday">Birthday Present</h2>
-      <p>Just imagine how your child or friend will be happy if he/she will be congratulated by a cartoon heroe in Youtube.</p>
-     <p>It will be really cool!</p>
-     <p>Contact us and it will be done just for 10$.</p>
-     <p></p>
-      </div>
+        <ThemeContext.Consumer>
+            { function(value) {
+                            
+                            const page : any = value.pages.find((item: {url: string}) => item.url === path)
+                            // console.log(value.pages)
+                            return page && <div>
+                                <p>
+                                    Language: {value.lang}
+                                </p>
+                                <h2 className="titleBirthday">{page.title}</h2>
+                                <p>{page.content}</p>
+
+                            </div>
+            }  
+            }
+        </ThemeContext.Consumer>
     /*<div>
                Language: {this.context.lang}
               
@@ -45,6 +53,6 @@ class Birthday extends Component {
   }
 }
 
-Birthday.contextType = ThemeContext
+//Birthday.contextType = ThemeContext
 
 export default Birthday;

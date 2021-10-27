@@ -15,7 +15,7 @@ class PageController {
         data: {
           pages: [
             {
-              url: 'home',
+              url: '/frontend/home',
               name: 'home',
               title: 'home',
               menu: 'home',
@@ -27,7 +27,7 @@ class PageController {
               type: 'static'
             },
             {
-              url: 'solution',
+              url: '/frontend/solution',
               name: 'solution',
               title: 'solution',
               menu: 'solution',
@@ -43,9 +43,9 @@ class PageController {
               type: 'static'
             },
             {
-              url: 'birthday',
+              url: '/frontend/birthday',
               name: 'birthday',
-              title: 'birthday',
+              title: 'Birthday',
               menu: 'birthday',
               content: `Birthday Present
 
@@ -57,7 +57,7 @@ class PageController {
               type: 'static'
             },
             {
-              url: 'cartoonizer',
+              url: '/frontend/cartoonizer',
               name: 'cartoonizer',
               title: 'cartoonizer',
               menu: 'cartoonizer',
@@ -67,7 +67,7 @@ class PageController {
               type: 'static'
             },
             {
-              url: 'contact-us',
+              url: '/frontend/contact-us',
               name: 'contact us',
               title: 'contac tus',
               menu: 'contact us',

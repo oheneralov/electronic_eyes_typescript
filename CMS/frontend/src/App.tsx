@@ -34,20 +34,20 @@ class App extends Component {
 		this.apiService = new ApiService();
 	}
 
-	componentWillMount() {
+	componentDidMount() {
 		try {
+			// console.log('app componentWillMount: ')
 			this.fetchPages();
 		} catch(err) {
-			console.log('componentWillMount: ' + err.message)
+			console.log('app componentWillMount: ' + err.message)
 		}
 	}
 
 	fetchPages = async () => {
 		try {
-			console.log('fetchPages')
 			const data: any = await this.apiService.getPages()
-				console.log(data)
-				themes.en.pages = data.data.pages
+				// console.log('fetchPages', data.data.pages.data.pages)
+				themes.en.pages = data.data.pages.data.pages
 				this.setState({
 					pages: data.pages
 				});

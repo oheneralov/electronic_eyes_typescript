@@ -5,7 +5,13 @@ import './HomeStyles.css';
 //import HomeContent from './HomeContent';
 
 export default class Home extends Component{
+  props: any;
+  constructor(props: object) {
+    super(props)
+
+  }
   render() {
+    console.log(this.props.location.pathname)
     return (
 <div className="HomeBlock">
 <p></p>
