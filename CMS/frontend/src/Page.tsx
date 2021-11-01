@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './BirthdayStyles.css';
 import {ThemeContext} from './theme-context';
 
-class Birthday extends Component {
+class Page extends Component {
   props: any;
   constructor(props: object) {
     super(props)
@@ -31,7 +31,7 @@ class Birthday extends Component {
                                     Language: {value.lang}
                                 </p>
                                 <h2 className="titleBirthday">{page.title}</h2>
-                                <p>{page.content}</p>
+                                <div dangerouslySetInnerHTML={{ __html: page.content }}></div>
 
                             </div>
             }  
@@ -55,4 +55,4 @@ class Birthday extends Component {
 
 //Birthday.contextType = ThemeContext
 
-export default Birthday;
+export default Page;

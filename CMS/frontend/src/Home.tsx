@@ -11,7 +11,6 @@ export default class Home extends Component{
 
   }
   render() {
-    console.log(this.props.location.pathname)
     return (
 <div className="HomeBlock">
 <p></p>

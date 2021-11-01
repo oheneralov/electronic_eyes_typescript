@@ -15,21 +15,39 @@ class PageController {
         data: {
           pages: [
             {
-              url: '/frontend/home',
+              url: '/',
               name: 'home',
-              title: 'home',
+              title: 'Home',
               menu: 'home',
-              content: `The following products and services are offered for our customers:
+              content: `<div>The following products and services are offered for our customers:</div>
 
+              <div>
               Application which helps blind people to 'see' the surrounding objects with the help of AI-based software.
               Service which converts your photo into a cartoonized one.
-              Congratulation on the behalf of a cartoon.`,
+              Congratulation on the behalf of a cartoon.
+              </div>`
+              ,
+              type: 'static'
+            },
+            {
+              url: '/',
+              name: 'home',
+              title: 'Home',
+              menu: 'home',
+              content: `<div>The following products and services are offered for our customers:</div>
+
+              <div>
+              Application which helps blind people to 'see' the surrounding objects with the help of AI-based software.
+              Service which converts your photo into a cartoonized one.
+              Congratulation on the behalf of a cartoon.
+              </div>`
+              ,
               type: 'static'
             },
             {
               url: '/frontend/solution',
               name: 'solution',
-              title: 'solution',
+              title: 'Solution',
               menu: 'solution',
               content: `Solution For Blind People
 
@@ -59,7 +77,7 @@ class PageController {
             {
               url: '/frontend/cartoonizer',
               name: 'cartoonizer',
-              title: 'cartoonizer',
+              title: 'Cartoonizer',
               menu: 'cartoonizer',
               content: `Convert your photo into a cartoon
 
@@ -67,9 +85,9 @@ class PageController {
               type: 'static'
             },
             {
-              url: '/frontend/contact-us',
+              url: '/frontend/contact',
               name: 'contact us',
-              title: 'contac tus',
+              title: 'Contact Us',
               menu: 'contact us',
               content: `If you have questions or would like to order one of our prodcts please contact us by e-mail:
 

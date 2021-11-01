@@ -3,11 +3,7 @@ import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, /*Link,*/ NavLink } from "react-router-dom";
-import Solution from './Solution';
-import Home from './Home';
-import Cartoonizer from './Cartoonizer';
-import Birthday from './Birthday';
-import Contact from './Contact';
+import Page from './Page';
 import Header from './Header';
 import Manager from './Manager';
 import {ThemeContext, themes} from './theme-context';
@@ -144,12 +140,12 @@ class App extends Component {
         </div>
         </div>
         </nav> 
-        <Route exact path="/" component={Home} />
-        <Route exact path="/frontend" component={Home} />
-        <Route exact path="/frontend/solution" component={Solution} />
-        <Route exact path="/frontend/birthday" component={Birthday} />
-        <Route exact path="/frontend/cartoonizer" component={Cartoonizer} />
-        <Route exact path="/frontend/contact" component={Contact} />
+        <Route exact path="/" component={Page} />
+        <Route exact path="/frontend" component={Page} />
+        <Route exact path="/frontend/solution" component={Page} />
+        <Route exact path="/frontend/birthday" component={Page} />
+        <Route exact path="/frontend/cartoonizer" component={Page} />
+        <Route exact path="/frontend/contact" component={Page} />
         <Route exact path="/frontend/header" component={Header} />
 		<Route exact path="/frontend/manage" component={Manager} />
         </div>
